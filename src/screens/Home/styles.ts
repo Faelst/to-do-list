@@ -2,7 +2,6 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#1A1A1A',
   },
   header: {
@@ -38,11 +37,11 @@ export const styles = StyleSheet.create({
     backgroundColor: '#1E6F9F',
   },
   containerTasks: {
+    height: 600,
     marginTop: 55,
     paddingHorizontal: 10,
   },
   headerTask: {
-    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -51,7 +50,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   tasksList: {
-    height: '95%',
+    marginBottom: 60,
   },
   titleTaskTextSpan: {
     backgroundColor: '#333333',

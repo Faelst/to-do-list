@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
     paddingRight: 2,
   },
   titleTaskText: {
+    height: 30,
     color: '#4EA8DE',
     fontWeight: 'bold',
   },

@@ -14,7 +14,7 @@ import { styles } from './styles';
 
 export function Home() {
   const [taskName, setTaskName] = useState('');
-  const [task, setTask] = useState<string[]>([]);
+  const [task, setTask] = useState<string[]>(['qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe']);
 
   const handleTaskName = (text: string) => {
 
