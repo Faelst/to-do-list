@@ -14,7 +14,7 @@ import { styles } from './styles';
 
 export function Home() {
   const [taskName, setTaskName] = useState('');
-  const [task, setTask] = useState<string[]>(['qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe', 'qwe']);
+  const [task, setTask] = useState<{ description: string, isDone: boolean }[]>([]);
 
   const handleTaskName = (text: string) => {
 
@@ -27,12 +27,22 @@ export function Home() {
       return;
     }
 
-    setTask([...task, taskName]);
+    setTask([...task, { description: taskName, isDone: false }]);
     setTaskName('');
   }
 
   const handleRemoveTask = (index: number) => {
     const newTask = task.filter((_, i) => i !== index);
+    setTask(newTask);
+  }
+
+  const handleCompleteTask = (index: number) => {
+    const newTask = task.map((item, i) => {
+      if (i === index) {
+        return { ...item, isDone: !item.isDone };
+      }
+      return item;
+    });
     setTask(newTask);
   }
 
@@ -65,7 +75,12 @@ export function Home() {
           <View style={styles.tasksList}>
             <FlatList
               data={task}
-              renderItem={({ item, index }) => <TaskCard description={item} onRemove={() => handleRemoveTask(index)} />}
+              renderItem={({ item, index }) =>
+                <TaskCard
+                  data={{ description: item.description, isDone: item.isDone }}
+                  onRemove={() => handleRemoveTask(index)}
+                  onConfirm={() => handleCompleteTask(index)}
+                />}
               showsVerticalScrollIndicator={false}
               ListEmptyComponent={() => <EmptyTaskList />}
             />
