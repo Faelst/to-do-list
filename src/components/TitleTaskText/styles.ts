@@ -11,12 +11,12 @@ export const styles = StyleSheet.create({
   },
   span: {
     backgroundColor: '#333333',
-    height: 19,
-    width: 19,
+    height: 20,
+    width: 25,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 9,
-    marginLeft: 5,
+    marginLeft: 10,
   },
   textSpan: {
     color: '#D9D9D9'
