@@ -27,6 +27,7 @@ export const styles = StyleSheet.create({
     padding: 10,
     borderWidth: 1,
     borderColor: '#0D0D0D',
+    color: '#FFF',
   },
   btnAdd: {
     width: 50,
@@ -37,7 +38,7 @@ export const styles = StyleSheet.create({
     backgroundColor: '#1E6F9F',
   },
   containerTasks: {
-    height: '67.5%',
+    marginTop: 55,
     paddingHorizontal: 10,
   },
   headerTask: {
@@ -54,8 +55,6 @@ export const styles = StyleSheet.create({
   },
   titleTaskTextSpan: {
     backgroundColor: '#333333',
-    height: 19,
-    width: 19,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 9,

@@ -7,6 +7,6 @@ export const styles = StyleSheet.create({
     borderTopColor: '#808080',
     borderTopWidth: 1,
     paddingTop: 60,
-    marginTop: 10,
+    marginTop: 5,
   },
 });
